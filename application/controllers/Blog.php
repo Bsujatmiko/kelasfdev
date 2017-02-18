@@ -99,5 +99,17 @@ class Blog extends CI_Controller{
         redirect('blog');
     }
     
+    public function cari()
+    {
+        $keyword = $this->input->get('cari');
+        
+        $data['title'] = $keyword;
+        $data['cari'] = $this->blog_model->cari_berita($keyword);
+        
+        $this->load->view('templates/header',$data);
+        $this->load->view('blog/cari',$data);
+        $this->load->view('templates/footer');
+    }
+    
     
 }

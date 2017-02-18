@@ -55,6 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     $route['member/login'] = 'user/login';
     $route['member/profil/(:any)'] = 'user/profil/$1';
     $route['member'] = 'user';
+    $route['blog/cari'] = 'blog/cari';
     $route['blog/hapus/(:any)'] = 'blog/hapus/$1';
     $route['blog/edit/(:any)'] = 'blog/edit/$1';
     $route['blog/tambah'] = 'blog/tambah';

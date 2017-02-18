@@ -1,5 +1,9 @@
     <div class="container">
-        <h3>berita kelas F Tif '15</h3>
+        <h3>Blog kelas F Tif '15</h3>
+        <form action="<?php echo site_url().'blog/cari'; ?>" method="get">
+            <input type="search" name="cari" placeholder="catatan..">
+        </form>
+        
         <?php if (isset($_SESSION['username'])): ?>
         <a href="<?php echo site_url().'blog/tambah'; ?>">tulis catatan di blog</a>
         <?php endif; ?>

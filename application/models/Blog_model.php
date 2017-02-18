@@ -71,4 +71,12 @@ class Blog_model extends CI_Model{
         
     }
     
+    public function cari_berita($keyword){
+              
+        $this->db->from('berita');
+        $this->db->like('judul OR isi',$keyword,'%%');
+        $query = $this->db->get();
+        return $query->result_array();
+        
+    }
 }
