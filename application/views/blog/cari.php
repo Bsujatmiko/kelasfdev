@@ -13,7 +13,7 @@
                         echo substr($data, 0,35).'...';
                     ?>
                 </p>
-                <i>post on : <?php echo date('d/F/y',  strtotime($key['waktu'])); ?></i><br>
+                <i>post on : <?php echo date('d-F-y',  strtotime($key['waktu'])); ?></i><br>
                 <a href="<?php echo site_url().'blog/'.$key['slug']; ?>">baca selengkapnya</a><br>
                 <i>editor : </i><a href="<?php echo site_url().'member/profil/'.$key['editor']; ?>"><?php echo $key['editor']; ?></a>
             </div>

@@ -12,6 +12,7 @@ class User extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('user_model');
+        $this->load->model('blog_model');
         $this->load->helper('url');
         $this->load->helper('form');
         
@@ -34,8 +35,9 @@ class User extends CI_Controller{
         
         $data['user'] = $this->user_model->get_user($username);
         $data['title'] = $data['user']['nama'];
+        $data['notes'] = $this->blog_model->get_notes($username);
         
-        if (empty($data['user'])):
+        if (empty($data['user']) && empty($data['notes'])):
             show_404();
         endif;
         

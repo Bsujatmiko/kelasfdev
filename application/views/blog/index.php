@@ -17,7 +17,7 @@
                         echo substr($data, 0,35).'...';
                     ?>
                 </p>
-                <i>post on : <?php echo date('d/F/y',  strtotime($brt['waktu'])); ?></i><br>
+                <i>post on : <?php echo date('F-d-y',  strtotime($brt['waktu'])); ?></i><br>
                 <a href="<?php echo site_url().'blog/'.$brt['slug']; ?>">baca selengkapnya</a><br>
                 <i>editor : </i><a href="<?php echo site_url().'member/profil/'.$brt['editor']; ?>"><?php echo $brt['editor']; ?></a>
             </div>

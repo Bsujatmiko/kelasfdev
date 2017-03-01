@@ -33,6 +33,11 @@ class Blog_model extends CI_Model{
         return $query->row_array();
     }
     
+    public function get_notes($username){
+        $query = $this->db->get_where('berita',  array('editor' => $username));
+        return $query->result_array();
+    }
+ 
     public function tambah_berita(){
         
         $this->load->helper('url');
